@@ -24,11 +24,9 @@ fi
 
 export WINEDEBUG=-all
 
-echo Installing winetricks helper for fonts and sharper rendering..
-/usr/bin/winetricks fontsmooth-rgb
-#/usr/bin/winetricks corefonts
-/usr/bin/winetricks gdiplus
 echo Installing LoxoneConfig..
 wine "/config/LoxoneConfigSetup.exe"
+echo Installing Visual C++ 2022 runtime..
+/usr/bin/winetricks -q vcrun2022
 echo Install finished. yay!
 exit 0
