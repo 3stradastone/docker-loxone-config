@@ -2,6 +2,7 @@
 # with WineHQ stable (wine32+wine64 multilib) so both the 32-bit installer and
 # the 64-bit LoxoneConfig.exe run correctly.
 FROM jlesage/baseimage-gui:debian-12-v4
+LABEL org.opencontainers.image.source="https://github.com/3stradastone/docker-loxone-config"
 
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
