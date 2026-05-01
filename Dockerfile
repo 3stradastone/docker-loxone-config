@@ -21,9 +21,6 @@ RUN dpkg --add-architecture i386 && \
 COPY init-install.sh /init-install.sh
 COPY startapp.sh /startapp.sh
 
-# Set remote resizing as default
-# https://github.com/jlesage/docker-baseimage-gui/issues/112
-RUN sed -i "s/resize = 'scale';/resize = 'remote';/g" /opt/noVNC/app/ui.js 2>/dev/null || true
 
 RUN chmod a+rx /startapp.sh && chmod a+rx /init-install.sh
 
