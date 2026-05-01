@@ -7,4 +7,4 @@ fi
 export WINEDEBUG=-all
 export QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox"
 setxkbmap $XLANG
-exec wine "/config/wine/drive_c/Program Files (x86)/Loxone/LoxoneConfig/LoxoneConfig.exe"
+exec wine explorer /desktop=LoxoneConfig,${DISPLAY_WIDTH:-1920}x${DISPLAY_HEIGHT:-1080} "/config/wine/drive_c/Program Files (x86)/Loxone/LoxoneConfig/LoxoneConfig.exe"
